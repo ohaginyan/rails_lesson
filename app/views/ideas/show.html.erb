@@ -21,6 +21,16 @@
     <br />
     <p><%= comment.body %></p>
     <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></p>
+
+    <div>返信
+      <%= render 'replies/form', reply: comment.replies.build %>
+      <% comment.replies.each do |reply| %>
+        <div>
+          <strong>コメントユーザーネーム：<%= reply.user_name %></strong>
+          <strong>コメント内容：<%= reply.body %></strong>
+        </div>
+      <% end %>
+    </div>
   </div>
 <% end %>
 <%= render 'comments/form', comment: @comment %>
