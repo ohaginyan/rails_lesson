@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User name:</strong>
+  <strong>User name:</strong><br />
   <%= @comment.user_name %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>Body:</strong><br />
   <%= @comment.body %>
 </p>
 
 <p>
-  <strong>Idea:</strong>
+  <strong>Idea:</strong><br />
   <%= @comment.idea_id %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to '編集', edit_comment_path(@comment) %> |
+<%= link_to '戻る', comments_path %>

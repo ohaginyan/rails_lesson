@@ -2,7 +2,7 @@
 
 <h1>Ideas</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -15,12 +15,12 @@
   <tbody>
     <% @ideas.each do |idea| %>
       <tr>
-        <td><%= idea.name %></td>
-        <td><%= idea.description %></td>
-        <td><%= idea.picture %></td>
-        <td><%= link_to 'Show', idea %></td>
-        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="col-sm-2"><%= idea.name %></td>
+        <td class="col-sm-4"><%= idea.description %></td>
+        <td class="col-sm-3"><%= idea.picture %></td>
+        <td class="col-sm-1"><%= link_to '表示', idea %></td>
+        <td class="col-sm-1"><%= link_to '編集', edit_idea_path(idea) %></td>
+        <td class="col-sm-1"><%= link_to '削除', idea, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
       </tr>
     <% end %>
   </tbody>
